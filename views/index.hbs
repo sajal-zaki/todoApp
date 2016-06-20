@@ -1,0 +1,13 @@
+<h1>All Users</h1>
+
+<!--dumping an array of objects-->
+    {{#each data}}
+        <a href="/users/{{this.id}}">{{this.username}}</a>
+        <br>
+    {{/each}}
+
+<!--post request to users, passing in data -->
+<form action="/users" method="post">
+    <input type="text" placeholder="username" name="username">
+    <input type="submit">
+</form>
